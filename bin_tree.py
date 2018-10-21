@@ -33,22 +33,22 @@ class Node:
         if tree:
             result = self.inOrder(tree.left)
             result.append(tree.valor)
-            result = result + self.inOrder(tree.right)
+            result += self.inOrder(tree.right)
         return result
 
     def preOrder(self, tree):
         result = []
         if tree:
             result.append(tree.valor)
-            result = result + self.preOrder(tree.left)
-            result = result + self.preOrder(tree.right)
+            result += self.preOrder(tree.left)
+            result += self.preOrder(tree.right)
         return result
 
     def posOrder(self, tree):
         result = []
         if tree:
             result = self.posOrder(tree.left)
-            result = result + self.posOrder(tree.right)
+            result += self.posOrder(tree.right)
             result.append(tree.valor)
         return result
 
