@@ -103,17 +103,10 @@ class Node:
 
 
 
-tree = Node(27)
-tree.inserir(14)
-tree.inserir(35)
-tree.inserir(10)
-tree.inserir(19)
-tree.inserir(31)
-tree.inserir(42)
-tree.inserir(222)
-tree.inserir(123123)
-tree.inserir(2)
-tree.inserir(0)
+tree = Node(1)
+for i in range(15):
+    tree.inserir(i)
+    
 
 print(">>> Tree: ", end="")
 tree.printTree()
@@ -124,18 +117,18 @@ print(">>> Pre-order:",tree.preOrder(tree))
 print(">>> Pos-order:",tree.posOrder(tree))
 
 print("\n\n>>> Busca Pos-order:")
-print(">", tree.buscaPosOrder(42).valor)
+print(">", tree.buscaPosOrder(42))
 print(">", tree.buscaPosOrder(10).valor)
-print(">", tree.buscaPosOrder(7))
+print(">", tree.buscaPosOrder(7).valor)
 
 
 print("\n\n>>> Busca In-order:")
-print(">", tree.buscaInOrder(42).valor)
+print(">", tree.buscaInOrder(42))
 print(">", tree.buscaInOrder(10).valor)
-print(">", tree.buscaInOrder(7))
+print(">", tree.buscaInOrder(7).valor)
 
 
 print("\n\n>>> Busca Pre-order:")
-print(">", tree.buscaPreOrder(42).valor)
+print(">", tree.buscaPreOrder(42))
 print(">", tree.buscaPreOrder(10).valor)
-print(">", tree.buscaPreOrder(7))
+print(">", tree.buscaPreOrder(7).valor)
